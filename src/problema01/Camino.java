@@ -1,7 +1,6 @@
 package problema01;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Camino {
 	
@@ -24,9 +23,5 @@ public class Camino {
 		double longitud = (mtsLn * m)/(Math.cos(lat * (pi/180)));
 		
 		this.listaCoord.add(new Coordenada(longitud,lat));
-	}
-	
-	public List<Coordenada> buscar(Coordenada no, Coordenada se){
-		
 	}
 }
