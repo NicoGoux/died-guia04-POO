@@ -35,25 +35,17 @@ public class PedidoBasico extends Pedido {
 			precioTotalProd+=unProducto.getPrecio();
 		}
 		
-		this.precio=precioTotalProd+this.comision();
+		precioTotalProd += precioTotalProd*0.05;
+		
+		if (this.express==true) {
+			precioTotalProd += precioTotalProd*0.20;
+		}
+		
+		this.precio=precioTotalProd;
+		
 	}
 
 	public double comision() {
-		
-		double precioTotalProd=0;
-		for (Producto unProducto : this.listaProd) {
-			precioTotalProd+=unProducto.getPrecio();
-		}
-		
-		double comision = precioTotalProd * 0.05;
-		
-		if (this.express==true) {
-			comision = (comision + precioTotalProd)*0.20;
-			return comision;
-		}
-		
-		else {
-			return comision;
-		}
+		return this.precio*0.1;
 	}
 }

@@ -30,24 +30,23 @@ public class PedidoPremium extends Pedido{
 			precioTotalProd+=unProducto.getPrecio();
 		}
 		
-		this.precio = precioTotalProd+this.comision();
-	}
-
-	public double comision() {
-		
-		double precioTotalProd=0,comision=0;
-		for (Producto unProducto : this.listaProd) {
-			precioTotalProd+=unProducto.getPrecio();
-		}
-		
 		if (this.listaProd.size()<5) {
-			comision = precioTotalProd * 0.20;
-			return comision;
+			precioTotalProd += precioTotalProd * 0.20;
 		}
 		
 		else {
-			comision = precioTotalProd * 0.30;
-			return comision;
+			precioTotalProd += precioTotalProd * 0.30;
 		}
+		
+		this.precio = precioTotalProd;
+	}
+
+	public double comision() {
+		double comision=0;
+		comision += this.precio*0.15;
+		if (this.cantProductos>10) {
+			comision+=50;
+		}
+		return comision;
 	}
 }

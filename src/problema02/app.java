@@ -1,6 +1,6 @@
 package problema02;
-import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import problema03.*;
 
 public class app {
 	public static void main(String[] args) {
@@ -44,5 +44,20 @@ public class app {
 		
 		
 		System.out.println("El Cadete 1 cobró por comisiones $"+c1.comision());
+		
+		Tramite t1 = new Tramite("Pagar luz","San Martin 3134");
+		
+		c1.agregarPedido(t1);
+		System.out.println("Tramite 1 agregado a la lista de tareas del cadete 1\n");
+		
+		System.out.println("El Cadete 1 cobró por comisiones $"+c1.comision()+"\n");
+		
+		t1.setFechaRealizado();
+		t1.comision();
+		System.out.println("Tramite 1 realizado. Fecha: "+t1.getFechaEntregado().format(DateTimeFormatter.ISO_LOCAL_DATE)+"\n");
+		
+		System.out.println("El Cadete 1 cobró por comisiones $"+c1.comision());
+		
+		
 	}
 }

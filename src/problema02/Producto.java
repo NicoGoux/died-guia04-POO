@@ -1,6 +1,7 @@
 package problema02;
 
 public class Producto {
+	@SuppressWarnings("unused")
 	private String descripcion;
 	private double precio;
 	
