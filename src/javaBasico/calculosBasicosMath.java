@@ -9,9 +9,6 @@ public class calculosBasicosMath {
 	
 	private int hola;
 	
-	
-	
-	
 	public calculosBasicosMath(int hola) {
 		super();
 		this.hola = hola;
