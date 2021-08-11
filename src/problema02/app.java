@@ -1,5 +1,4 @@
 package problema02;
-import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 public class app {
@@ -30,7 +29,7 @@ public class app {
 		c1.agregarPedido(pedido1);
 		c1.agregarPedido(pedido2);
 		
-		System.out.println("El Cadete 1 cobró por comisiones $"+c1.comision()+"\n");
+		System.out.println("El Cadete 1 cobrï¿½ por comisiones $"+c1.comision()+"\n");
 		
 		pedido1.envio();
 		pedido1.comision();
@@ -43,6 +42,6 @@ public class app {
 		System.out.println("Precio $"+pedido2.getPrecio()+"\n");
 		
 		
-		System.out.println("El Cadete 1 cobró por comisiones $"+c1.comision());
+		System.out.println("El Cadete 1 cobrï¿½ por comisiones $"+c1.comision());
 	}
 }
